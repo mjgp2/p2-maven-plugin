@@ -154,6 +154,7 @@ public class AquteBundler implements ArtifactBundler {
         } finally {
             jar.close();
         }
+        removeSignature(request.getSourceOutputFile());
     }
 
     private Manifest getManifest(Jar jar) throws Exception {
